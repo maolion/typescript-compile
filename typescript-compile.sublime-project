@@ -1,0 +1,8 @@
+{
+    "name" : "typescript-compile",
+    "folders" : [ 
+        {
+            "path" : "."
+        }
+    ]
+}

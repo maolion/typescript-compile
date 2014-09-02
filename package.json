@@ -1,0 +1,28 @@
+{
+  "version": "0.0.1",
+  "author": "maolion",
+  "email" : "maolion.j@gmail.com",
+  "license": "MIT",
+  "name": "typescript-compile",
+  "description": "node.js typescript compile adapter",
+  "keywords": [
+    "TypeScript",
+    "ts",
+    "tsc"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "http://maolion.com",
+  "repository": {
+	"type": "git",
+	"url": "https://github.com/maolion/typescript-compile"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "main": "./compile.js",
+  "dependencies": {
+    "typescript": "1.0.1.0"
+  }
+}
