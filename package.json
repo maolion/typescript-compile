@@ -1,5 +1,5 @@
 {
-  "version": "0.0.1",
+  "version": "0.0.3",
   "author": "maolion",
   "email" : "maolion.j@gmail.com",
   "license": "MIT",
@@ -23,6 +23,6 @@
   },
   "main": "./compile.js",
   "dependencies": {
-    "typescript": "1.0.1.0"
+    "typescript": "1.0.1"
   }
 }

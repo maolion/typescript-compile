@@ -1,48 +1,48 @@
 
 # typescript-compile
 
-¿ÉÔÚnode.jsÖĞµ÷ÓÃµÄ typescript ±àÒëÆ÷
+å¯åœ¨node.jsä¸­è°ƒç”¨çš„ typescript ç¼–è¯‘å™¨
 
 ## TSCompile( *filepath*, *setting* )
 
-### ²ÎÊıËµÃ÷
+### å‚æ•°è¯´æ˜
 
-##### *filepath* ´«ÈëĞèÒª±»±àÒëµÄÎÄ¼şÃûfilepath Ò²¿ÉÒÔÖ±½Ó½ÓÊÜ²åÈëÔ´´úÂë£¨×Ö·û´®Êı¾İ£©, *±ØĞë*
+##### *filepath* ä¼ å…¥éœ€è¦è¢«ç¼–è¯‘çš„æ–‡ä»¶åfilepath ä¹Ÿå¯ä»¥ç›´æ¥æ¥å—æ’å…¥æºä»£ç ï¼ˆå­—ç¬¦ä¸²æ•°æ®ï¼‰, *å¿…é¡»*
 
-##### *setting* ±àÒëÅäÖÃÑ¡Ïî£¬*¿ÉÑ¡*
+##### *setting* ç¼–è¯‘é…ç½®é€‰é¡¹ï¼Œ*å¯é€‰*
 
-	JSON ¸ñÊ½½ÓÊÜµÄÅäÖÃÏî
+	JSON æ ¼å¼æ¥å—çš„é…ç½®é¡¹
     	
 	var TSCompile = require("typescript-compile");
 	{
-		out            : String, //Êä³öÎÄ¼şÂ·¾¶£¬×¢£ºtypescript-compile²»»á×Ô¼ºÍê³ÉÕâ¸ö²Ù×÷
-		module         : Enum(commonjs, amd), //Ö¸Ã÷Ô´´úÂëÊ¹ÓÃµÄÄ£¿é¹ÜÀí·½°¸
-		target         : Enum(ES3, ES5), //Ö¸Ã÷Ô´´úÂë»ùÓÚÄÄÖÖÓïÑÔ°æ±¾
+		out            : String, //è¾“å‡ºæ–‡ä»¶è·¯å¾„ï¼Œæ³¨ï¼štypescript-compileä¸ä¼šè‡ªå·±å®Œæˆè¿™ä¸ªæ“ä½œ
+		module         : Enum(commonjs, amd), //æŒ‡æ˜æºä»£ç ä½¿ç”¨çš„æ¨¡å—ç®¡ç†æ–¹æ¡ˆ
+		target         : Enum(ES3, ES5), //æŒ‡æ˜æºä»£ç åŸºäºå“ªç§è¯­è¨€ç‰ˆæœ¬
 		noImplicitAny  : Boolean, // Warn on expressions and declarations with an implied 'any' type.
-		removeComments : Boolean, // É¾³ıÄ¿±ê´úÂëÉÏµÄ×¢ÊÍ
-		noLib          : Boolean, //²»ÒıÓÃTypescriptÄ¬ÈÏµÄÓïÑÔÉùÃ÷¿â
-		root           : String, //Ö¸¶¨Ô´´úÂëËùÔÚÄ¿Â¼
-		file           : String, //Ö¸¶¨Ô´´úÂëµÄÎÄ¼şÃû
-		nodejs         : Boolea //Ô´´úÂëÊÇ·ñÎªnode.js»·¾³ÔËĞĞµÄ´úÂë£¬Èç¹ûÊÇ£¬Ôò»á×Ô¶¯°üº¬¹ØÓÚnode.js½Ó¿ÚµÄÉùÃ÷ÎÄ¼ş
+		removeComments : Boolean, // åˆ é™¤ç›®æ ‡ä»£ç ä¸Šçš„æ³¨é‡Š
+		noLib          : Boolean, //ä¸å¼•ç”¨Typescripté»˜è®¤çš„è¯­è¨€å£°æ˜åº“
+		root           : String, //æŒ‡å®šæºä»£ç æ‰€åœ¨ç›®å½•
+		file           : String, //æŒ‡å®šæºä»£ç çš„æ–‡ä»¶å
+		nodejs         : Boolea //æºä»£ç æ˜¯å¦ä¸ºnode.jsç¯å¢ƒè¿è¡Œçš„ä»£ç ï¼Œå¦‚æœæ˜¯ï¼Œåˆ™ä¼šè‡ªåŠ¨åŒ…å«å…³äºnode.jsæ¥å£çš„å£°æ˜æ–‡ä»¶
 	}
 
 
-	String ¸ñÊ½½ÓÊÜµÄÅäÖÃÏî
+	String æ ¼å¼æ¥å—çš„é…ç½®é¡¹
     
     "--out xxx.js --module commonjs --target ES3 --noImplictAny --removeComments --noLib --root xxx --file xxx --nodejs"
     
-    ËùÓĞÅäÖÃÏî¶¼Îª¿ÉÑ¡
+    æ‰€æœ‰é…ç½®é¡¹éƒ½ä¸ºå¯é€‰
     
-### ·µ»ØÖµ
+### è¿”å›å€¼
 
 	{
-        path       : String, //Êä³öÂ·¾¶
-        code       : String, //±àÒëºóµÄÄ¿±ê´úÂë 
-        referenced : Object, //Ô´´úÂëÄ£¿éÒÀÀµµÄÄ£¿éÁĞ±í
-        compiler   : Compile //±àÒëÆ÷¶ÔÏó
+        path       : String, //è¾“å‡ºè·¯å¾„
+        code       : String, //ç¼–è¯‘åçš„ç›®æ ‡ä»£ç  
+        referenced : Object, //æºä»£ç æ¨¡å—ä¾èµ–çš„æ¨¡å—åˆ—è¡¨
+        compiler   : Compile //ç¼–è¯‘å™¨å¯¹è±¡
     }
 
-## Ê¹ÓÃ·½Ê½
+## ä½¿ç”¨æ–¹å¼
 
 	var TSCompile = require("typescript-compile");
     
